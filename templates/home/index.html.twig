@@ -1,0 +1,17 @@
+{% extends 'layout/front.html.twig' %}
+
+{% block title %}Home!{% endblock %}
+
+{% block body %}
+
+    <div class="bandeau">
+        <img class="responsive" src="{{ asset('/build/image/bandeau.png') }}" />
+        <div class="text text1">Découvrez <span class="orange">l'espace</span></div>
+        <div class="text text2">Comme jamais</div>
+        <div class="text text3">auparavant</div>
+    </div>    
+    <div id="articles">Nos articles</div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {{generate_article_mini()|raw}}
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+  {% for article in articlesEntities %}
+     <a href="{{ path('article', {'id': article.id, 'slug': article.title|slug }) }}">
+        <div class="col">
+            <div class="card">
+                <img width="25%" src="{{ asset('uploads/article/' ~ article.cover) }}" class="card-img-top"/>
+                <div class="card-body">
+                    <h5 class="card-title">{{article.title}}</h5>
+                   
+                </div>
+            </div>
+        </div>
+    </a>    
+    {% endfor %}

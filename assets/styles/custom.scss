@@ -1,0 +1,261 @@
+html{
+    height:100%;
+}
+
+body {
+    height:100%;
+    position: relative;
+    background-color: #e4e6ec!important;
+  }
+  
+#wrap{
+    min-height:100%;
+    position: relative;
+}
+
+header {
+    position: relative;
+    height:105px;
+}
+
+#main {
+    position: relative;
+    padding-bottom: 350px;
+}
+  
+footer {
+    background-color: #dc5e44!important;
+    font-family: "Roboto Slab";
+    font-weight:800;
+    font-style:normal;
+    color:#ffffff;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+figcaption {
+    width: 161px;
+    line-height: 35px;
+    font-size: 35px;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Black.ttf");
+    font-weight:900;
+    font-style:normal;
+
+  }
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.ttf");
+    font-weight:400;
+    font-style:normal;
+}  
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-LightItalic.ttf");
+    font-weight:300;
+    font-style:italic;
+}  
+  
+  @font-face {
+    font-family: "Roboto Slab";
+    src: url("fonts/RobotoSlab-ExtraBold.ttf");
+    font-weight:800;
+    font-style:normal;
+  }
+
+  .headerTitle {
+    font-family: "Roboto Slab";
+    font-weight:800;
+    font-style:normal;
+    line-height: 35px;
+    font-size: 35px;
+    color: #dc5e44!important;
+    margin-left:20px;
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
+
+  }
+
+  .bandeau {
+      position:relative;
+  }
+
+  .position_btn {
+      position:absolute;
+      right: 2%;
+      top: 0%;
+  }
+
+  .text {
+    position: absolute;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-style: normal;
+    font-size: 56px;
+    line-height: 35px;
+    color:#ffffff;
+  }
+
+  .text1 {
+    
+    top: 30%;
+    left: 5%;
+    
+  }
+
+  .text2{
+  
+    top: 50%;
+    left: 16%;
+    
+  }
+
+  .text3 {
+    
+    top: 70%;
+    left: 21%;
+    
+  }
+
+  .text1 .orange {
+    color: #dc5e44!important; 
+  }
+
+  .navbar {
+      justify-content: left!important;
+  }
+
+  #articles {
+    margin-top: 90px!important;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-style: normal;
+    color:#dc5e44;
+    font-size: 48px;
+    line-height: 63px;
+    margin-bottom: 40px!important;
+  }
+
+  .card {
+      border-radius: 30px!important;
+      margin-bottom : 40px!important;
+  }
+
+  .card-grand {
+    border-radius: 95px!important;
+    margin-bottom : 40px!important;
+  }
+
+  .card-title {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-style: normal;
+    color:#dc5e44;
+    font-size: 32px;
+    line-height: 38px; 
+    margin-left: 30px;
+    height: 118px;
+    width: 340px; 
+  }
+
+  .card-center {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-style: normal;
+    color:#dc5e44;
+    font-size: 32px;
+    line-height: 38px; 
+    margin-top: 27px;
+    height: 41px;
+    
+    text-align:center;
+     
+  }
+
+  .card-img-top {
+      height: 129px; 
+  }
+
+  .contenu {
+      margin-top: 30px;
+  }
+
+  .card-text {
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    color:#131313;
+    font-size: 16px;
+    line-height: 22px; 
+
+  }
+
+  .text-muted {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: italic;
+    color:#131313;
+    font-size: 16px!important;
+    line-height: 22px; 
+    margin-left: 30px;
+  }
+ 
+  a{
+    color: #000000!important;
+  }
+  a:link {
+    text-decoration: none;
+    color: #000000!important;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: #000000!important;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #000000!important;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: #000000!important;
+  }
+
+  a.bouton {
+    padding: 10px 30px;
+    background: #dc5e44;
+    color: #FFFFFF!important;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    border: 2px solid #dc5e44;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px; 
+    height: 66px;
+    width: 135px;
+    }
+
+    .retour {
+        margin-top: 30px;
+    }

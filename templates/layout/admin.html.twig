@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block header  %}
+    <header>
+        <div class="p-2 container">
+            <nav class="navbar text-right navbar-expand-lg navbar-white">
+                <img class="text-left" src="{{ asset('/build/image/Logo_header.png') }}" />
+                <p class="headerTitle">SpaceBlog</p>   
+                
+
+                <div class="retour position_btn">
+
+                {% if app.user is null %}
+                    <a class="bouton" href="{{ path('app_login') }}">Connexion</a>
+                {% else %}
+                     <a class="bouton" href="{{ path('app_logout') }}"> Déconnexion</a>
+                {% endif %}
+
+
+
+                   
+                </div>
+
+            </nav>
+
+
+
+        </div>
+
+    </header>
+
+{% endblock %}
+
+{% block footer  %}
+    <footer>
+        
+                  <figure>
+                    
+                        <img src="{{ asset('/build/image/Logo_footer.png') }}" />
+                        <figcaption>
+                        SpaceBlog
+                        </figcaption>
+                        
+                  </figure>
+                  
+{% endblock %}

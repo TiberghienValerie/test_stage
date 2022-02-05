@@ -1,0 +1,66 @@
+{% extends 'layout/admin.html.twig' %}
+
+{% block title %}Liste des articles{% endblock %}
+
+{% block body %}
+
+<div class="retour mt-5 mb-5 ">
+    <a href="{{ path('home') }}" class="bouton">Retour</a>
+</div>
+
+<div class="container">
+    <div class=" card">
+        <div class="card-body">
+            {{ form_start(form) }}
+            <div class="row p-2">
+                <div class="col">
+                    {{ form_row(form.objet) }}
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    {{ form_row(form.submit, {'attr': {'class': 'btn btn-primary'}, 'label': 'Rechercher' }) }}
+                </div>
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+    <a class="m-2 btn btn-primary" href="{{ path('home')}}">Ajouter un article</a>
+    <div class="count">
+        <h3> Nombre d'articles : {{ pagination.getTotalItemCount }} </h3>
+    </div>
+    <table class="table table-hover table-success table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Titre</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in pagination %}
+            <tr>
+                <td>
+                   <a href="{{ path('home', {'id': article.id}) }}">{{ article.title }}</a>
+                </td>
+                <td>
+                    <a class="m-2 btn btn-primary" href="{{ path('home', {'id': article.id}) }}">Modifier</a>
+                    <a class="m-2 btn btn-danger" href="{{ path('home', {'id': article.id}) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
+

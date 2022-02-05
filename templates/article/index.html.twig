@@ -1,0 +1,13 @@
+{% extends 'layout/front.html.twig' %}
+
+{% block title %}Article!{% endblock %}
+
+{% block body %}
+
+<div class="retour">
+    <a href="{{ path('home') }}" class="bouton">Retour</a>
+</div>
+
+{{ generate_article_simple(articleEntity)|raw }}
+
+{% endblock %}

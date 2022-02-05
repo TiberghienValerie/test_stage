@@ -1,0 +1,19 @@
+
+  <div class="card card-grand mt-5">
+  <img src="{{ asset('uploads/article/' ~ article.cover) }}">
+  <div class="card-body">
+    <h5 class="card-center">{{article.title}}</h5>
+   
+        <div class="card-text contenu">
+            {{article.content}}
+        </div>
+    
+     <div class="card-text contenu">
+        <small class="text-muted">
+            Publié le {{article.dateCreated|date("d/m/Y")}} à {{article.dateCreated|date("h:i:s")}}
+        </small>
+     </div>   
+    
+  </div>
+</div>
+   
