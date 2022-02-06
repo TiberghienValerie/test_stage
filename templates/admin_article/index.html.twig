@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <a class="m-2 btn btn-primary" href="{{ path('home')}}">Ajouter un article</a>
+    <a class="m-2 btn btn-primary" href="{{ path('admin_article_add')}}">Ajouter un article</a>
     <div class="count">
         <h3> Nombre d'articles : {{ pagination.getTotalItemCount }} </h3>
     </div>
@@ -42,11 +42,11 @@
         {% for article in pagination %}
             <tr>
                 <td>
-                   <a href="{{ path('home', {'id': article.id}) }}">{{ article.title }}</a>
+                   <a href="{{ path('admin_article_read', {'id': article.id}) }}">{{ article.title }}</a>
                 </td>
                 <td>
-                    <a class="m-2 btn btn-primary" href="{{ path('home', {'id': article.id}) }}">Modifier</a>
-                    <a class="m-2 btn btn-danger" href="{{ path('home', {'id': article.id}) }}">Supprimer</a>
+                    <a class="m-2 btn btn-primary" href="{{ path('admin_article_update', {'id': article.id}) }}">Modifier</a>
+                    <a class="m-2 btn btn-danger" href="{{ path('admin_article_delete', {'id': article.id}) }}">Supprimer</a>
                 </td>
             </tr>
         {% endfor %}

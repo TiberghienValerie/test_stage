@@ -1,0 +1,52 @@
+{% extends 'layout/admin.html.twig' %}
+{% block title %}Modification d'un article {% endblock %}
+{% block body %}
+{{ tinymce_init() }}
+
+    <div class="container">
+        <a class="btn btn-primary" href="{{ path('admin_article_list') }}">Retour</a>
+        <div class="m-2 container card">
+            {{ form_start(form) }}
+            <div class="my-custom-class-for-errors">
+                {{ form_errors(form) }}
+            </div>
+
+            <div class="row p-2">
+                <div class="col">
+                    {{ form_row(form.title) }}
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    {{ form_row(form.content) }}
+                </div>
+            </div>
+
+            <div class="row p-2">
+                <div class="col-12 m-2">
+                    {% if cover != '' %}
+                        <img width="25%" src="{{ asset('uploads/article/' ~ cover) }}" />
+                    {%endif %}
+                    {{ form_label(form.cover) }}
+                    {{ form_widget(form.cover) }}
+                </div>
+            </div>
+
+           
+
+           
+
+            <div class="row p-2">
+                <div class="col">
+                    {{ form_row(form.submit, {'attr': {'class': 'btn btn-primary'}, 'label': 'Modification' }) }}
+                </div>
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+   
+
+
+{% endblock %}

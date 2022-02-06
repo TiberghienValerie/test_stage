@@ -54,4 +54,19 @@ class ArticleRepository extends ServiceEntityRepository
     public function findArticle() {
         return $this->createQueryBuilder('a');
     }
+
+
+    /**
+      * @return Article[] Returns an array of Article objects
+    */
+    
+    public function findArticles()
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.date_created', 'DESC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+    
 }

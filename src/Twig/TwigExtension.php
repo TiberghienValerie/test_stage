@@ -51,7 +51,7 @@ class TwigExtension extends AbstractExtension
 
     public function generateArticleMini()
     {
-        $articlesEntities = $this->articleRepository->findAll();    
+        $articlesEntities = $this->articleRepository->findArticles();    
         return $this->twigEnvironnement->render('partial/article-mini.html.twig', [
             'articlesEntities' => $articlesEntities
         ]);

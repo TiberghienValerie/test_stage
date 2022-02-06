@@ -1,0 +1,24 @@
+{% extends 'layout/admin.html.twig' %}
+
+{% block title %}{{ articleEntity.title}}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <a class="m-2 btn btn-primary" href="{{ path('admin_article_list') }}">Retour</a>
+        <div class="card card-grand mt-5">
+            <img src="{{ asset('uploads/article/' ~ articleEntity.cover) }}">
+            <div class="card-body">
+                <h5 class="card-center">{{articleEntity.title}}</h5>
+                <div class="card-text contenu">
+                    {{articleEntity.content|raw}}
+                </div>
+            
+                <div class="card-text contenu">
+                    <small class="text-muted">
+                        Publié le {{articleEntity.dateCreated|date("d/m/Y")}} à {{articleEntity.dateCreated|date("h:i:s")}}
+                    </small>
+                </div>   
+            </div>
+        </div>
+    </div>    
+{% endblock %}
